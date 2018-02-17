@@ -25,7 +25,7 @@ function newGame(){
 
      for (var x = 0; x<6; x++){
         crystalValue[x] = (Math.floor(Math.random() * 12) + 1);
-        crystalImg.each("crystal-value", crystalValue[x]);
+        crystalImg.attr("crystal-value", crystalValue[x]);
         $("#crystals").append(crystalImg);
     }
 }
@@ -78,7 +78,7 @@ if (userScore===targetNumber){
 
 //call functions to run game
 
-newGame ();
+newGame();
 updateScore();
 updateWins();
 updateLosses();

@@ -1,36 +1,69 @@
-<style>
+
 
 body{
-	background-image: center;
+	background-color: black;
+	font-size: 14px;
 }
 
 .jumbotron{
 	background: none;
+	text-align: center;
+	color: #ffffff;
 }
-/*
+
 #metatron-img{
-	background-repeat: no-repeat;
-	height:100%;
+	display: block;
+	height:90%;
 	width:auto;
-}*/
+	margin-left: 240px;
+	z-index:0;
+}
+
+.main-content{
+	border:3px solid #ffffff;
+	text-align: center;
+	margin-bottom:15px;
+}
+
+#score{
+float: left;
+clear: both;
+text-align: center;
+border:3px solid #fff;
+margin-bottom: 15px;
+}
+
+#winsAndLosses{
+	float:left;
+	clear:both;
+	text-align: center;
+	border:3px solid #fff;
+	margin-bottom: 15px;
+}
+
+#wins{
+
+}
+
+#losses{
+
+}
 
 h1,h2,h3,p{
 	color: #4aaaaf;
-	float: left;
-	clear:both;
 }
 
 .crystals{
-	height:100px;
-	width: 100px;
+	height:120px;
+	width: 120px;
 }
 
 .container{
-	height:2000px;
+	height:1000px;
 }
 
 #crystal1{
-
+	
 }
 
 #crystal2{
@@ -53,6 +86,6 @@ h1,h2,h3,p{
 
 }
 
-.footer{
-
+#targetNumber{
+	
 }
