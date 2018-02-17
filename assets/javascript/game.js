@@ -1,36 +1,64 @@
 $(document).ready(function() {
 
+	//initialize variables to be used
 
+var targetNumber;
+var userScore=0;
 var wins=0;
 var losses=0;
-var userScore=0;
 var crystalValue=[];
-var crystalImg=[]
+var imageArr=["assets/images/crystal1.png","assets/images/crystal2.png","assets/images/crystal3.png","assets/images/crystal4.png","assets/images/crystal5.png","assets/images/crystal6.png"];
+var crystalImg;
 
-for (var i=0; 1<.length; i++);
+//functions to be called later
 
-[Math.floor(Math.random()*12)+1]
 
-[Math.floor(Math.random()* (120-19)+19]
+function newGame(){
+	 userScore = 0;
+    targetNumber = Math.floor(Math.random() * (120-19) + 19);
+    $("#targetNumber").text(targetNumber);
+    updateScore();
 
-	
+    for (var i = 0; i < imageArr.length; i++) {
+        crystalImg = $("<img>");
+        crystalImg.attr("src", imageArr[i]);
+       }
+
+     for (var x = 0; x<6; x++){
+        crystalValue[x] = (Math.floor(Math.random() * 12) + 1);
+        crystalImg.attr("data-crystalvalue", crystalValue[x]);
+        $("#crystals").append(crystalImg);
+    }
 }
 
 
-// this creates a new div for the crystals
-for (var i = 0, k = 0; i < imgSrc.length, k < 4; i++, k++) {
-var imageCrystal = $("<img>");
-imageCrystal.addClass("crystal-image");
-imageCrystal.attr("src", imgSrc[i]);
-numberOptions[k] = (Math.floor(Math.random() * 12) + 1);
-imageCrystal.attr("data-crystalvalue", numberOptions[k]);
-$("#crystals").append(imageCrystal);
+//
+
+function updateScore(){
+	$("#userScore").html(userScore);
+}
+
+//
+
+
+function updateWins(){
+	$("#wins").html(wins);
+}
+
+//
+
+function updateLosses(){
+	$("#losses").html(losses);
 }
 
 
-function startNewGame (){
 
-}
+
+
+//call functions to run game
+
+function newGame ();
+
 
 //Lets psuedo code and build our functions down here since we are starting with one activities code.
  //Firstly we need an initialize function that runs at start up and every time a game is won or lost.
@@ -50,3 +78,5 @@ function startNewGame (){
 			// 	<img id="crystal4" class="crystals" src="assets/images/crystal4.png"/>
 			// 	<img id="crystal5" class="crystals" src="assets/images/crystal5.png"/>
 			// 	<img id="crystal6" class="crystals" src="assets/images/crystal6.png"/>
+
+}
